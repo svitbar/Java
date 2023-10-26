@@ -26,7 +26,7 @@ public class Main {
             return false;
         }
 
-        for (String key: arr) {
+        for (String key : arr) {
 
             for (int i = 0; i < key.length(); i++) {
                 if (!Character.isLetter(key.charAt(i))) {
@@ -42,21 +42,22 @@ public class Main {
     public static void fifth(String[] arr) {
         StringBuilder res = new StringBuilder();
 
-        for (String i: arr) {
+        for (String i : arr) {
 
             char[] word = i.toCharArray();
             boolean unique = true;
 
+            out:
             for (int j = 0; j < word.length; j++) {
 
                 for (int k = j + 1; k < word.length; k++) {
                     if (word[j] == word[k]) {
                         unique = false;
-                        break;
+                        break out;
                     }
                 }
 
-                if (!unique) break;
+                // if (!unique) break;
             }
 
             if (unique) res.append(i).append(" ");
