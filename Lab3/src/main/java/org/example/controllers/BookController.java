@@ -26,8 +26,7 @@ public class BookController {
                     view.printMessage(BookView.MENU);
                     break;
                 case BookUtils.SHOW:
-                    view.printMessage(BookView.ALL_BOOKS);
-                    view.displayBooks(model.getBooks());
+                    showAllBooks();
                     break;
                 case BookUtils.AUTHOR:
                     bookByAuthor();
@@ -39,13 +38,17 @@ public class BookController {
                     bookAfterYear();
                     break;
                 case BookUtils.SORT:
-                    view.printMessage(BookView.SORTED);
-                    view.displayBooks(model.sortByPublisher());
+                    showSortedBook();
                     break;
                 default:
                     System.out.println(BookView.WRONG_CMD);
             }
         }
+    }
+
+    public void showAllBooks() {
+        view.printMessage(BookView.ALL_BOOKS);
+        view.displayBooks(model.getBooks());
     }
 
     public void bookByAuthor() {
@@ -77,10 +80,15 @@ public class BookController {
         Book[] books = model.getProcessedArrayYear(year);
 
         if (books.length == 0) {
-            view.printMessage(BookView.AFTER_YEAR + year + " year.");
+            view.printMessage(BookView.NO_YEAR + year + " year.");
         } else {
-            view.printByRequestNum(BookView.NO_YEAR, year);
+            view.printByRequestStr(BookView.AFTER_YEAR, year + " year");
             view.displayBooks(books);
         }
+    }
+
+    public void showSortedBook() {
+        view.printMessage(BookView.SORTED);
+        view.displayBooks(model.sortByPublisher());
     }
 }

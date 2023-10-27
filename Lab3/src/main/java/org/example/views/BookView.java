@@ -21,7 +21,7 @@ public class BookView {
     public static final String BY_PUBLISHER = "Books published by ";
     public static final String AFTER_YEAR = "Books published after ";
     public static final String SORTED = "Books sorted by publisher:";
-    public static final String NO_AUTHOR = "Not found any book by ";
+    public static final String NO_AUTHOR = "Not found any book written by ";
     public static final String NO_PUBLISHER = "Not found any book published by ";
     public static final String NO_YEAR = "Not found any book published after ";
 
@@ -30,10 +30,6 @@ public class BookView {
     }
 
     public void printByRequestStr(String mess, String value) {
-        System.out.println(mess + value + ":\n");
-    }
-
-    public void printByRequestNum(String mess, int value) {
         System.out.println(mess + value + ":\n");
     }
 
