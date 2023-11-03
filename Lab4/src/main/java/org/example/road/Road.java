@@ -20,9 +20,11 @@ public class Road {
 
     public void addCarToRoad(Vehicle<?> vehicle) {
         if (carsInRoad.contains(vehicle)) {
-            throw new IllegalArgumentException("Vehicle is already on the road.");
+            throw new IllegalArgumentException("Vehicle is already on this road.");
         } else if (vehicle.getCurrentRoad() != null) {
             throw new IllegalArgumentException("Vehicle is already on another road.");
+        } else if (vehicle.getOccupiedSeatCount() == 0) {
+            throw new IllegalArgumentException("Vehicle cannot be without a driver.");
         } else {
             vehicle.setCurrentRoad(this);
             carsInRoad.add(vehicle);

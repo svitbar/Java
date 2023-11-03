@@ -11,10 +11,6 @@ public class Human {
         this.currentVehicle = null;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public Vehicle<?> getCurrentVehicle() {
         return currentVehicle;
     }
