@@ -40,6 +40,12 @@ public class BookController {
                 case BookUtils.SORT:
                     showSortedBook();
                     break;
+                case BookUtils.SAVE:
+                    saveIntoFile();
+                    break;
+                case BookUtils.READ:
+                    readFromFile();
+                    break;
                 default:
                     System.out.println(BookView.WRONG_CMD);
             }
@@ -90,5 +96,27 @@ public class BookController {
     public void showSortedBook() {
         view.printMessage(BookView.SORTED);
         view.displayBooks(model.sortByPublisher());
+    }
+
+    public void saveIntoFile() {
+        String path = BookUtils.getFilePath();
+
+        if (model.writeBooksIntoFile(path)) {
+            view.printMessage(BookView.SUCCESS_SAVE + path + ".");
+        } else {
+            view.printMessage(BookView.FAIL_SAVE + path + ".");
+        }
+    }
+
+    public void readFromFile() {
+        String path = BookUtils.getFilePath();
+        Book[] res = model.readBooksFromFile(path);
+
+        if (res != null) {
+            view.printMessage(BookView.SUCCESS_READ + path + ":");
+            view.displayBooks(res);
+        } else {
+            view.printMessage(BookView.FAIL_READ + path + ".");
+        }
     }
 }

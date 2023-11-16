@@ -1,5 +1,6 @@
 package org.example.models;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
@@ -108,5 +109,13 @@ public class BookModel {
         Arrays.sort(sortedArray, comparator);
 
         return sortedArray;
+    }
+
+    public boolean writeBooksIntoFile(String path) {
+        return FileProcess.writeIntoFile(path, books);
+    }
+
+    public Book[] readBooksFromFile(String path) {
+        return (Book[]) FileProcess.readFromFile(path);
     }
 }

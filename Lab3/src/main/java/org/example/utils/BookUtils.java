@@ -13,9 +13,16 @@ public class BookUtils {
     public static final String PUBLISHER = "publisher";
     public static final String YEAR = "year";
     public static final String SORT = "sort";
+    public static  final String SAVE = "save";
+    public static final String READ = "read";
 
     public static String getInput() {
         System.out.println(BookView.ENTER);
+        return sc.nextLine();
+    }
+
+    public static String getFilePath() {
+        System.out.println(BookView.PATH);
         return sc.nextLine();
     }
 }
