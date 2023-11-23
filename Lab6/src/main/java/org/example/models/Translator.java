@@ -95,7 +95,7 @@ public class Translator {
         dictionary.put("code", "код");
         dictionary.put("language", "мова");
         dictionary.put("how", "як");
-        dictionary.put("after", "після");
+        dictionary.put("world", "світ");
         dictionary.put("anywhere", "будь-де");
         dictionary.put("extraordinary", "незвичайний");
         dictionary.put("island", "острів");
