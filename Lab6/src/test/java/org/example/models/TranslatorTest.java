@@ -102,27 +102,42 @@ class TranslatorTest {
 
     @Test
     void testTranslatePhraseOneWord() {
-        translator.translatePhrase("hello");
+        String expected = "привіт";
+        String actual = translator.translatePhrase("hello");
+
+        assertEquals(expected, actual);
     }
 
     @Test
     void testTranslatePhraseOneWordWithFirstUpperCaseLetter() {
-        translator.translatePhrase("Hello");
+        String expected = "Привіт";
+        String actual = translator.translatePhrase("Hello");
+
+        assertEquals(expected, actual);
     }
 
     @Test
     void testTranslatePhraseSuccess() {
-        translator.translatePhrase("hello world");
+        String expected = "привіт світ";
+        String actual = translator.translatePhrase("hello world");
+
+        assertEquals(expected, actual);
     }
 
     @Test
     void testTranslatePhraseSuccessSentence() {
-        translator.translatePhrase("Hello, World!");
+        String expected = "Привіт, Світ!";
+        String actual = translator.translatePhrase("Hello, World!");
+
+        assertEquals(expected, actual);
     }
 
     @Test
     void testTranslatePhraseSeveralSentences() {
-        translator.translatePhrase("Hello! Ball game, anywhere.");
+        String expected = "Привіт! М'яч гра, будь-де.";
+        String actual = translator.translatePhrase("Hello! Ball game, anywhere.");
+
+        assertEquals(expected, actual);
     }
 
     @Test
