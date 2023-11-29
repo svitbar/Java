@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -53,9 +54,9 @@ public class Main {
             .count() == str.length();
 
     public static String[] wordsWithUniqueChars(String[] arr) {
-        List<String> resultList = new ArrayList<>();
-        Arrays.stream(arr).filter(w -> isUnique.test(w)).forEach(resultList::add);
-
-        return resultList.toArray(new String[0]);
+        return Arrays.stream(arr)
+                .filter(w -> isUnique.test(w))
+                .toList()
+                .toArray(new String[0]);
     }
 }

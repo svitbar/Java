@@ -11,7 +11,7 @@ public class Translator {
 
     public Translator() {
         dictionary = new HashMap<>();
-        getDefaultRecords();
+        setDefaultRecords();
     }
 
     public Map<String, String> getDictionary() {
@@ -19,12 +19,6 @@ public class Translator {
     }
 
     public void validateWord(String word) {
-/*        String[] words = word.split("\\s+");
-        for (String w: words) {
-            if (!w.matches("^[A-Za-z-]+$")) {
-                throw new InputMismatchException("Word should be written using latin alphabet!");
-            }
-        }*/
         if (word.split("\\s+").length != 1) {
             throw new InputMismatchException("Only one word should be entered.");
         }
@@ -35,13 +29,6 @@ public class Translator {
     }
 
     public void validateTranslation(String translation) {
-/*        String[] translations = translation.split("\\s+");
-
-        for (String t: translations) {
-            if (!t.matches("^[А-ЩЬЮЯҐЄІЇа-щьюяґєії'-]+$")) {
-                throw new InputMismatchException("Translation should be written using cyrillic alphabet!");
-            }
-        }*/
         if (translation.split("\\s+").length != 1) {
             throw new InputMismatchException("Only one word should be entered.");
         }
@@ -86,7 +73,7 @@ public class Translator {
         return translatedText.toString();
     }
 
-    public void getDefaultRecords() {
+    public void setDefaultRecords() {
         dictionary.put("hello", "привіт");
         dictionary.put("goodbye", "бувай");
         dictionary.put("name", "ім'я");
