@@ -4,12 +4,12 @@ import java.text.DecimalFormat;
 
 public class Main {
     public static void main(String[] args) {
-        startProgram(8);
+        startProgram(1);
     }
 
     public static void startProgram(int threads) {
         long startTime = System.nanoTime();
-        int iterations = 1_000_000_000;
+        int iterations = 1_000_000;
         int inside = 0;
 
         MyRunnable r = new MyRunnable(iterations / threads);
