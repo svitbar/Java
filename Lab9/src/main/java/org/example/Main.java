@@ -10,13 +10,14 @@ import org.example.task2.Producer;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         // performTransfer();
-        // performTask2();
+        performTask2();
     }
 
     public static void performTransfer() {
-        int threads = 10;
+        int threads = 1000;
+        int accounts = 100;
 
-        Bank bank = new Bank(threads);
+        Bank bank = new Bank(accounts);
 
         int startBalance = bank.getBankBalance();
         System.out.println("Bank balance at the beginning: " + startBalance);
@@ -27,7 +28,6 @@ public class Main {
             t[i] = new Thread(new Transfer(bank, randomAccount, randomAccount.getBalance() * 2));
             t[i].start();
         }
-
 
         try {
             for (Thread tr: t) {
@@ -64,7 +64,7 @@ public class Main {
         }
 
         for (int i = 1; i <= 100; i++) {
-            System.out.println("Number " + i);
+            System.out.println("Iteration " + i);
             String removedMess = bufferConsumer.removeMessage();
             System.out.println(removedMess);
         }

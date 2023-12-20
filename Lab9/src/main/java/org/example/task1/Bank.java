@@ -6,21 +6,19 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Bank {
-    private Account[] accounts;
-    private Lock bl;
-    private Condition con;
-    private final Random random = new Random();
+    private final Account[] accounts;
+    private final Lock bl;
 
     public Bank(int n) {
         this.accounts = new Account[n];
 
         for (int i = 0; i < n; i++) {
+            Random random = new Random();
             accounts[i] = new Account(i + 1, Math.abs(random.nextInt(0, 1000)));
-            System.out.println("Account " + (i + 1) + " balance: " + accounts[i].getBalance());
+            // System.out.println("Account " + (i + 1) + " balance: " + accounts[i].getBalance());
         }
 
         bl = new ReentrantLock();
-        con = bl.newCondition();
     }
 
     public void transfer(Account from, Account to, int amount) throws InterruptedException {
@@ -62,15 +60,3 @@ public class Bank {
         return accounts;
     }
 }
-
-/*
-            System.out.print(Thread.currentThread());
-            try {
-                from.withdraw(amount);
-            } catch (RuntimeException e) {
-                System.out.println(" " + e.getMessage());
-                return;
-            }
-            System.out.print(" " + amount + " from " + from + " to " + to + ". ");
-            to.deposit(amount);
-            System.out.println("All the accounts balances together = " + getBankBalance());*/
