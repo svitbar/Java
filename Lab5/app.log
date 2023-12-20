@@ -1,0 +1,97 @@
+21:23:50.509 [main] INFO  org.example.Main - it works
+21:30:21.424 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+21:30:28.658 [main] INFO  org.example.third.Third - Please enter a string to encrypt: 
+21:30:33.075 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+22:07:48.964 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+22:07:54.500 [main] INFO  org.example.third.Third - Please enter a string to encrypt: 
+22:07:57.520 [main] INFO  org.example.third.Third - Write to file.
+22:07:57.521 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+22:08:01.833 [main] FATAL org.example.third.Third - Failed to decrypt data: bft fbfdgbb (Не удается найти указанный файл)
+22:55:06.746 [main] INFO   - Starting application...
+22:55:06.754 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+22:55:24.563 [main] INFO  org.example.third.Third - Please enter a string to encrypt: 
+22:55:29.008 [main] DEBUG org.example.third.Third - path = input.txt, s = hello
+22:55:29.010 [main] DEBUG org.example.third.Third - Start writing...
+22:55:29.011 [main] INFO  org.example.third.Third - Successfully encrypted string and wrote it to file.
+22:55:29.011 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+22:55:46.033 [main] DEBUG org.example.third.Third - path = input.txt, str = 
+22:55:46.035 [main] DEBUG org.example.third.Third - Start reading...
+22:55:46.036 [main] INFO  org.example.third.Third - Successfully decrypted string: hello
+22:55:46.036 [main] INFO   - Exit application...
+22:56:24.798 [main] INFO   - Starting application...
+22:56:24.808 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+22:56:29.795 [main] INFO  org.example.third.Third - Please enter a string to encrypt: 
+22:56:35.370 [main] DEBUG org.example.third.Third - path = input.txt, s = hello
+22:56:35.371 [main] DEBUG org.example.third.Third - Start writing...
+22:56:35.371 [main] INFO  org.example.third.Third - Successfully encrypted string and wrote it to file.
+22:56:35.372 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+22:56:41.270 [main] DEBUG org.example.third.Third - path = hellosjfbkabkdjk
+22:56:41.272 [main] FATAL org.example.third.Third - Failed to decrypt data: hellosjfbkabkdjk (Не удается найти указанный файл)
+22:56:41.272 [main] INFO   - Exit application...
+22:58:14.134 [main] INFO   - Starting application...
+22:58:14.145 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+23:03:51.415 [main] INFO   - Starting application...
+23:03:51.424 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+23:04:16.778 [main] FATAL org.example.third.Third - Failed to decrypt data: jvjfdvkfj (Не удается найти указанный файл)
+03:13:13.931 [main] INFO  org.example.third.Third - Please select language:
+- en - English;
+- ua - Українська;
+- qu - Quenya;
+- si - Edhellen (Sindarin).
+
+03:13:20.439 [main] INFO  org.example.third.Third - ???? ?????, ??????? ????? ????? ??? ?????????? ??????????:
+03:13:32.026 [main] INFO  org.example.third.Third - Please select language:
+- en - English;
+- ua - Українська;
+- qu - Quenya;
+- si - Edhellen (Sindarin).
+
+03:13:33.759 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+03:13:38.939 [main] INFO  org.example.third.Third - Please enter a string to encrypt: 
+03:13:42.380 [main] DEBUG org.example.third.Third - path = input.txt, s = hello
+03:13:42.382 [main] DEBUG org.example.third.Third - Start writing...
+03:13:42.382 [main] INFO  org.example.third.Third - Successfully encrypted string and wrote it to file.
+03:13:42.383 [main] INFO  org.example.third.Third - Please enter file name to save data in.
+03:13:48.058 [main] DEBUG org.example.third.Third - path = skvnksvb
+03:13:48.060 [main] FATAL org.example.third.Third - Failed to decrypt data: skvnksvb (Не удается найти указанный файл)
+03:27:53.057 [main] INFO  org.example.third.Third - Please select language:
+- en - English;
+- ua - Українська;
+- qu - Quenya;
+- si - Edhellen (Sindarin).
+
+03:27:58.247 [main] INFO  org.example.third.Third - ???? ?????, ??????? ????? ????? ??? ?????????? ??????????:
+03:28:35.301 [main] INFO  org.example.third.Third - Please select language:
+- en - English;
+- ua - Українська;
+- qu - Quenya;
+- si - Edhellen (Sindarin).
+
+03:28:38.048 [main] FATAL org.example.third.Third - Can't find bundle for base name location.text, locale ua
+03:28:56.864 [main] INFO  org.example.third.Third - Please select language:
+- en - English;
+- ua - Українська;
+- qu - Quenya;
+- si - Edhellen (Sindarin).
+
+03:28:58.623 [main] INFO  org.example.third.Third - Будь ласка, введіть назву файлу для збереження інформації:
+03:29:05.532 [main] INFO  org.example.third.Third - Будь ласка, введіть рядок, який хочете зашифрувати: 
+03:29:11.212 [main] DEBUG org.example.third.Third - path = input.txt, s = hello
+03:29:11.213 [main] DEBUG org.example.third.Third - Почався запис...
+03:29:11.214 [main] INFO  org.example.third.Third - Рядок було успішно зашифровано та записано у файл.
+03:29:11.215 [main] INFO  org.example.third.Third - Будь ласка, введіть назву файлу для збереження інформації:
+03:29:21.176 [main] DEBUG org.example.third.Third - path = input.txt
+03:29:21.177 [main] DEBUG org.example.third.Third - Почалося читання...
+03:29:21.179 [main] INFO  org.example.third.Third - Було успішно розшифровано рядок: hello
+03:52:35.649 [main] INFO  org.example.third.Third - Please select language:
+- en - English;
+- ua - Українська;
+- la - Latin.
+
+03:52:38.449 [main] INFO  org.example.third.Third - Quaeso intrant lima nomen ut notitias in.
+03:53:15.928 [main] INFO  org.example.third.Third - Please select language:
+- en - English;
+- ua - Українська;
+- la - Latin.
+
+03:53:17.568 [main] INFO  org.example.third.Third - Будь ласка, введіть назву файлу для збереження інформації:
